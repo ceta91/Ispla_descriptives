@@ -3,29 +3,32 @@
 # Revised 22-10-2018, Coded by: CT
 
 #Remember to change the path of file names to your PC or MAC
-# For future datasets, it is important all the varibles
+# wich is why the function read.table looks odd in the 
+#path part. 
+
+# For future datasets, it is important all the variables
 # have exactly the same names across excel or txt files.
 
 #data ispla 1
-is1 <- read.table("/Users/cati7218/Dropbox/ispla1.csv", 
+is1 <- read.table("/Users///ispla1.csv", 
                   header=TRUE,
                   sep=";")
 #data ispla 2
-is2 <- read.table("/Users/cati7218/Dropbox/ispla2.csv", 
+is2 <- read.table("/Users///ispla2.csv", 
                   header=TRUE,
                   sep=";")
 #data ispla 3
-is3 <- read.table("/Users/cati7218/Dropbox/ispla3.csv", 
+is3 <- read.table("/Users///ispla3.csv", 
                   header=TRUE,
                   sep=";")
 # new ispla 4
 
-is4<-read.table("/Users/cati7218/Desktop/isplaN.csv", 
+is4<-read.table("/Users///isplaN.csv", 
                 header=TRUE,
                 sep=";")
 # new ispla 5
 
-is5<-read.table("/Users/cati7218/Dropbox/ispla5.csv", 
+is5<-read.table("/Users///ispla5.csv", 
                 header=TRUE,
                 sep=";")
 
@@ -92,5 +95,5 @@ UT(is4,"32 hrs","40 hrs")
 #ispla 5 also has totally different variable names.It didn't seem woth it 
 #to modify the previous function for 1 t.test
 
-t.test(is5$Mean[is5$Time.point=="16h"],is5$Mean[is5$Time.point=="32h"]
-       ,paired = FALSE) #16 and 32
+t.test(is5$Mean[is5$Time.point=="16h"],is5$Mean[is5$Time.point=="32h"],
+       paired = FALSE) #16 and 32
